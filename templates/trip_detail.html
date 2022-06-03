@@ -1,0 +1,140 @@
+<style>
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+         padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+    .styled-table tbody tr.active-row {
+        font-weight: bold;
+        color: #009879;
+    }
+
+    .submit-button {
+        
+color: rgb(1, 6, 2);
+font-weight: bold;
+font-size: medium;
+border-radius: 20px;
+
+text-shadow: none;
+width: 250px;
+padding: 0.7rem;
+height: auto;
+
+padding: 12px 0px 10px 0px;
+
+    }
+
+
+</style>
+<center>
+<h1> Bus details </h1>
+
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+
+
+<table class="styled-table">
+<thead>
+    <tr>
+        
+        <th>Source</th>
+        <th>Destination</th>
+      
+        <th>Number of seats </th>
+        <th>Number of seats remaining </th>
+        <th>Booking </th>
+        
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        
+        <td>{{object.source}}</td>
+        <td>{{object.destination}}</td>
+        <td>{{object.no_of_seats}}</td>
+        <td>{{object.no_of_seats_left}}</td>
+        <td><a href="{% url 'booking' %}"> Book</a></td>
+        
+        
+        
+
+    </tr>
+
+
+    
+</tbody>
+
+</table>
+
+
+<!-- <body>
+    
+ 
+    <h1>
+      Ticket Booking 
+      </h1> 
+    
+      
+      <form
+      action="/html/tags/html_form_tag_action.cfm"method="post">
+
+      <h3>
+        Name </h3>
+        <input type="text" placeholder="Enter your name " required> </input>
+      <h3>
+       Email </h3>
+        <input type="text" placeholder=" Enter your email" required> </input>
+
+        <h3>
+            Number of passengers
+          </h3>
+
+          <input type="text" placeholder=" Enter the number of passengers" required> </input>
+
+          <h3>
+              Enter your contact number
+            </h3>
+
+            <input type="text" placeholder=" Enter your contact number" required> </input>
+
+
+<div class="submit-button">
+
+  
+    <input type="submit" class="submit-button" value="Book">
+  
+  
+    
+    </div>
+
+</form>
+</body> </center> -->
