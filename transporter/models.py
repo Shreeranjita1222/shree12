@@ -15,4 +15,20 @@ class Trip(models.Model):
     def __str__(self):
         return self.source
 
-# class Bookings(models.model):
+
+class Bookings(models.Model):
+    BOOKED = 'B'
+    CANCELLED = 'C'
+
+    TICKET_STATUSES = ((BOOKED, 'Booked'),
+                       (CANCELLED, 'Cancelled'),)
+    email = models.EmailField()
+    name = models.CharField(max_length=30)
+    
+    nos = models.DecimalField(decimal_places=0, max_digits=2)
+    
+    
+    status = models.CharField(choices=TICKET_STATUSES, default=BOOKED, max_length=2)
+
+    def __str__(self):
+        return self.email
